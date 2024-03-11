@@ -1,0 +1,40 @@
+﻿@model List<Coche>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+
+            <th>
+                MARCA
+            </th>
+            <th>
+                MODELO
+            </th>
+            <th>
+                IMAGEN
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var coche in Model)
+        {
+            <tr>
+                <td>
+                    @coche.Marca
+                </td>
+                <td>
+                    @coche.Modelo
+                </td>
+                <td>
+                    <img src="@coche.Imagen" style="width:100px;height:100px" />
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

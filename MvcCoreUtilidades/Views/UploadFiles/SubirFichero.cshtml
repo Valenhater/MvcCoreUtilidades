@@ -1,0 +1,23 @@
+﻿<h1>Upload Files Net Core</h1>
+
+<form method="post" enctype="multipart/form-data">
+    <label>Seleccione un fichero</label>
+    <input type="file" name="fichero" class="form-control" />
+    <button class="btn btn-info">
+        Subir fichero
+    </button>
+</form>
+
+<h2 style="color:purple">
+    @ViewData["MENSAJE"]
+</h2>
+
+<img src="@ViewData["URL"]" />
+
+<h2 style="color:orange">
+    @ViewData["URL"]
+</h2>
+
+<h2 style="color:red">
+    @ViewData["PRUEBA"]
+</h2>
